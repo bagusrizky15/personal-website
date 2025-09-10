@@ -97,7 +97,7 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
         } to-transparent rounded-3xl z-0 pointer-events-none`}
         variants={navGlowVariants}
       />
-      <ul className="flex flex-wrap items-center gap-1 sm:gap-2 relative z-10">
+      <ul className="grid grid-cols-4 gap-1 sm:gap-2 relative z-10">
         {menuItems.map((item, index) => (
           <motion.li key={item.label} className="relative">
             <motion.div
@@ -117,7 +117,7 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
               />
               <a
                 href={item.href}
-                className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
+                className="flex items-center justify-center gap-2 px-3 py-2 sm:px-4 sm:py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl w-full"
               >
                 <span
                   className={`transition-colors duration-300 ${activeItem === item.label ? "text-foreground" : `group-hover:${item.iconColor} text-foreground`}`}
