@@ -3,14 +3,10 @@
 import { motion } from "framer-motion"
 import { 
   Github, 
-  Twitter, 
   Linkedin, 
-  Instagram, 
-  Mail, 
   Globe,
   Youtube,
-  Dribbble,
-  Behance
+  BookText,
 } from "lucide-react"
 
 interface SocialLink {
@@ -26,50 +22,34 @@ const socialLinks: SocialLink[] = [
   {
     id: 1,
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/bagusrizky15",
     icon: <Github className="h-5 w-5 sm:h-6 sm:w-6" />,
-    username: "@yourusername",
+    username: "@bagusrizky15",
     description: "Check out my code repositories and open source contributions"
   },
   {
     id: 2,
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/mohamadbagusrizky/",
     icon: <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />,
-    username: "Your Name",
+    username: "Mohamad Bagus Rizky",
     description: "Professional network and career updates"
   },
   {
     id: 3,
-    name: "Twitter",
-    url: "https://twitter.com/yourusername",
-    icon: <Twitter className="h-5 w-5 sm:h-6 sm:w-6" />,
-    username: "@yourusername",
-    description: "Thoughts on technology, programming, and more"
-  },
-  {
-    id: 4,
-    name: "Instagram",
-    url: "https://instagram.com/yourusername",
-    icon: <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />,
-    username: "@yourusername",
-    description: "Behind-the-scenes photos and creative projects"
-  },
-  {
-    id: 5,
     name: "YouTube",
-    url: "https://youtube.com/c/yourchannel",
+    url: "https://www.youtube.com/@codewithbagus",
     icon: <Youtube className="h-5 w-5 sm:h-6 sm:w-6" />,
-    username: "Your Channel",
+    username: "Code With Bagus",
     description: "Tutorials, tech reviews, and project showcases"
   },
   {
-    id: 6,
-    name: "Email",
-    url: "mailto:youremail@example.com",
-    icon: <Mail className="h-5 w-5 sm:h-6 sm:w-6" />,
-    username: "youremail@example.com",
-    description: "Feel free to reach out for collaborations or inquiries"
+    id: 4,
+    name: "Medium",
+    url: "https://medium.com/@mohamad.15",
+    icon: <BookText className="h-5 w-5 sm:h-6 sm:w-6" />,
+    username: "@mohamad.15",
+    description: "In-depth articles on web development and technology"
   }
 ]
 

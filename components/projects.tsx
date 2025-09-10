@@ -15,34 +15,34 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform built with React and Node.js, featuring product catalog, shopping cart, and secure payment processing.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/example/ecommerce",
-    liveUrl: "https://ecommerce.example.com"
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A productivity application for managing tasks and projects with real-time collaboration features.",
-    technologies: ["Next.js", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com/example/task-manager",
-    liveUrl: "https://tasks.example.com"
-  },
-  {
-    id: 3,
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard that displays current conditions and forecasts for multiple locations.",
-    technologies: ["React", "OpenWeather API", "Chart.js"],
-    githubUrl: "https://github.com/example/weather-dashboard"
-  },
-  {
-    id: 4,
-    title: "Portfolio Website",
-    description: "A modern portfolio website showcasing design and development projects with smooth animations.",
-    technologies: ["TypeScript", "Next.js", "Framer Motion"],
-    liveUrl: "https://portfolio.example.com"
+    title: "Halo BCA",
+    description: "Halo BCA is an assistance and product services for BCA customers and non-customers that can be accessed at any time.",
+    technologies: ["Swift", "UIKit", "SwiftUI", "Firebase"],
+    // githubUrl: "https://github.com/example/ecommerce",
+    liveUrl: "https://apps.apple.com/id/app/halo-bca/id1527740494"
   }
+  // {
+  //   id: 2,
+  //   title: "Task Management App",
+  //   description: "A productivity application for managing tasks and projects with real-time collaboration features.",
+  //   technologies: ["Next.js", "Firebase", "Tailwind CSS"],
+  //   githubUrl: "https://github.com/example/task-manager",
+  //   liveUrl: "https://tasks.example.com"
+  // },
+  // {
+  //   id: 3,
+  //   title: "Weather Dashboard",
+  //   description: "A responsive weather dashboard that displays current conditions and forecasts for multiple locations.",
+  //   technologies: ["React", "OpenWeather API", "Chart.js"],
+  //   githubUrl: "https://github.com/example/weather-dashboard"
+  // },
+  // {
+  //   id: 4,
+  //   title: "Portfolio Website",
+  //   description: "A modern portfolio website showcasing design and development projects with smooth animations.",
+  //   technologies: ["TypeScript", "Next.js", "Framer Motion"],
+  //   liveUrl: "https://portfolio.example.com"
+  // }
 ]
 
 export function Projects() {
@@ -95,7 +95,7 @@ export function Projects() {
                   className="flex items-center gap-1 text-sm hover:text-foreground transition-colors"
                 >
                   <Globe className="h-4 w-4" />
-                  <span>Live Demo</span>
+                  <span>App Store</span>
                 </a>
               )}
             </div>
