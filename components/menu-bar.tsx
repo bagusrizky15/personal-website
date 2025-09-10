@@ -101,6 +101,7 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
               initial="initial"
               animate={activeItem === item.label ? "hover" : "initial"}
               onClick={() => {
+                /// Open CV
                 if (item.label === "CV") {
                   window.open("/cv.pdf", "_blank")
                 } else {
