@@ -69,7 +69,7 @@ export function SocialMedia() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
             whileHover={{ x: 10 }}

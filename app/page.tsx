@@ -28,9 +28,14 @@ export default function Page() {
           </div>
           <div className="flex-1 w-full">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-              <div className="flex items-center gap-2">
-                <h1 className="text-2xl sm:text-3xl font-semibold">M Bagus Rizky</h1>
-                <BadgeCheck className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
+              <div>
+                <div className="flex items-center gap-2">
+                  <h1 className="text-2xl sm:text-3xl font-semibold">M Bagus Rizky</h1>
+                  <BadgeCheck className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500" />
+                </div>
+                <p className="text-muted-foreground text-sm sm:text-base">
+                  Fullstack Developer | N8N Automation | Vibe Coding
+                </p>
               </div>
               <div className="self-start sm:self-center">
                 <ThemeToggle />
