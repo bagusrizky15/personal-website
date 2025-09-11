@@ -26,15 +26,15 @@ const translations = {
     "menu.n8n": "N8N",
     
     // General
-    "coming_soon": "Coming Soon...",
+    "coming_soon": "Coming Soon",
     
     // Bio section
-    "bio.title": "Hello, I'm Bagus!",
-    "bio.description": "I'm a Fullstack Developer with a passion for creating beautiful and functional web applications. I specialize in modern technologies like React, Next.js, and Node.js.",
-    "bio.description2": "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical writing.",
+    "bio.title": "Hi, I'm Bagus!",
+    "bio.description": "I'm a Mobile Developer with expertise in creating seamless mobile applications. I also have the ability to develop websites and work with automation tools like n8n to streamline processes and enhance productivity.",
+    "bio.description2": "Outside of coding, I enjoy exploring new mobile development trends, contributing to open-source projects, and sharing my knowledge through blogs and tutorials.",
     
     // Projects section
-    "projects.title": "My Projects",
+    "projects.title": "Projects",
     "projects.description": "Here are some of the projects I've worked on recently.",
     
     // Social Media section
@@ -76,19 +76,19 @@ const translations = {
     "menu.n8n": "N8N",
     
     // General
-    "coming_soon": "Segera Hadir...",
+    "coming_soon": "Coming Soon",
     
     // Bio section
     "bio.title": "Halo, Saya Bagus!",
-    "bio.description": "Saya seorang Pengembang Fullstack dengan passion untuk membuat aplikasi web yang indah dan fungsional. Saya mengkhususkan diri dalam teknologi modern seperti React, Next.js, dan Node.js.",
-    "bio.description2": "Ketika saya tidak sedang coding, Anda bisa menemukan saya menjelajahi teknologi baru, berkontribusi pada proyek open-source, atau berbagi pengetahuan melalui tulisan teknis.",
+    "bio.description": "Saya seorang Mobile Developer dengan keahlian dalam menciptakan aplikasi mobile yang mulus. Saya juga memiliki kemampuan untuk mengembangkan website dan bekerja dengan alat otomatisasi seperti n8n untuk menyederhanakan proses dan meningkatkan produktivitas.",
+    "bio.description2": "Di luar coding, saya menikmati mengeksplorasi tren pengembangan mobile terbaru, berkontribusi pada proyek open-source, dan membagikan pengetahuan saya melalui blog dan tutorial.",
     
     // Projects section
-    "projects.title": "Proyek Saya",
+    "projects.title": "Projects",
     "projects.description": "Berikut adalah beberapa proyek yang telah saya kerjakan baru-baru ini.",
     
     // Social Media section
-    "social.title": "Terhubung Dengan Saya",
+    "social.title": "Connect With Me",
     "social.description": "Jangan ragu untuk menghubungi saya di platform mana pun ini.",
     
     // Project cards
@@ -108,7 +108,7 @@ const translations = {
     "social.email": "Email",
     
     // Confirmation dialog
-    "confirm.redirect.title": "Konfirmasi Pengalihan",
+    "confirm.redirect.title": "Konfirmasi",
     "confirm.redirect.message": "Anda akan dialihkan ke halaman lain. Apakah Anda ingin melanjutkan?",
     "confirm.redirect.cancel": "Batal",
     "confirm.redirect.ok": "OK",
