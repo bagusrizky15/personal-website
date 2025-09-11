@@ -1,9 +1,15 @@
 import "@/styles/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
-import type React from "react" // Added import for React
+import type React from "react"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: "M Bagus Rizky",
+  description: "Fullstack Developer | N8N Automation | Vibe Coding",
+  icons: [{ rel: "icon", url: "/fav.svg" }],
+}
 
 export default function RootLayout({
   children,
@@ -20,7 +26,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-export const metadata = {
-      generator: 'v0.app'
-    };
