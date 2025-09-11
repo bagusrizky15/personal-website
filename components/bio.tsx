@@ -15,10 +15,6 @@ export function Bio() {
         Hi! I'm Bagus, a profesional iOS developer who loves creating beautiful and functional mobile app experiences.
         I specialize in modern mobile app technologies and enjoy working on projects that make a difference.
       </p>
-      <p className="text-muted-foreground text-sm sm:text-base">
-        When I'm not coding, you can find me exploring new technologies, contributing to open source projects,
-        or enjoying some time outdoors.
-      </p>
     </motion.div>
   )
 }
