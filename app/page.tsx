@@ -12,6 +12,7 @@ import { useState } from "react"
 import { Bio } from "@/components/bio"
 import { Projects } from "@/components/projects"
 import { SocialMedia } from "@/components/social-media"
+import { N8NContent } from "@/components/n8n-content"
 
 export default function Page() {
   const [activeMenu, setActiveMenu] = useState("Hi")
@@ -48,6 +49,7 @@ export default function Page() {
               {activeMenu === "Hi" && <Bio />}
               {activeMenu === "Projects" && <Projects />}
               {activeMenu === "Social Media" && <SocialMedia />}
+              {activeMenu === "N8N" && <N8NContent />}
             </div>
           </div>
         </div>

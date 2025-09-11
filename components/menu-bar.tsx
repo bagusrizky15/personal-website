@@ -8,6 +8,7 @@ import {
   FileText,
   Share2,
   User,
+  Zap,
 } from "lucide-react"
 import { useTheme } from "next-themes"
 
@@ -20,25 +21,31 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    icon: <User className="h-5 w-5" />,
+    icon: <User className="h-4 w-4" />,
     label: "Hi",
     gradient: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
     iconColor: "text-blue-500",
   },
   {
-    icon: <Briefcase className="h-5 w-5" />,
+    icon: <Briefcase className="h-4 w-4" />,
     label: "Projects",
     gradient: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
     iconColor: "text-orange-500",
   },
   {
-    icon: <Share2 className="h-5 w-5" />,
+    icon: <Share2 className="h-4 w-4" />,
     label: "Social Media",
     gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
     iconColor: "text-green-500",
   },
+  // {
+  //   icon: <Zap className="h-4 w-4" />,
+  //   label: "N8N",
+  //   gradient: "radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(147, 51, 234, 0.06) 50%, rgba(126, 34, 206, 0) 100%)",
+  //   iconColor: "text-purple-500",
+  // },
   {
-    icon: <FileText className="h-5 w-5" />,
+    icon: <FileText className="h-4 w-4" />,
     label: "CV",
     gradient: "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "text-red-500",
@@ -92,7 +99,7 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
         } to-transparent rounded-3xl z-0 pointer-events-none`}
         variants={navGlowVariants}
       />
-      <ul className="grid grid-cols-4 gap-1 sm:gap-2 relative z-10">
+      <ul className="grid grid-cols-5 gap-1 sm:gap-2 relative z-10">
         {menuItems.map((item, index) => (
           <motion.li key={item.label} className="relative">
             <motion.div
@@ -118,14 +125,14 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
                 }}
               />
               <div
-                className="flex items-center justify-center gap-2 px-3 py-2 sm:px-4 sm:py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl w-full cursor-pointer"
+                className="flex items-center justify-center gap-2 px-2 py-1.5 sm:px-3 sm:py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl w-full cursor-pointer"
               >
                 <span
                   className={`transition-colors duration-300 ${activeItem === item.label ? "text-foreground" : `group-hover:${item.iconColor} text-foreground`}`}
                 >
                   {item.icon}
                 </span>
-                <span className={`text-sm sm:text-base ${activeItem === item.label ? "text-foreground" : ""}`}>
+                <span className={`text-xs sm:text-sm ${activeItem === item.label ? "text-foreground" : ""}`}>
                   {item.label}
                 </span>
               </div>
