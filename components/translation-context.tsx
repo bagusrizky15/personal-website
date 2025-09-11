@@ -30,8 +30,8 @@ const translations = {
     
     // Bio section
     "bio.title": "Hi, I'm Bagus!",
-    "bio.description": "I'm a Mobile Developer with expertise in creating seamless mobile applications. I also have the ability to develop websites and work with automation tools like n8n to streamline processes and enhance productivity.",
-    "bio.description2": "Outside of coding, I enjoy exploring new mobile development trends, contributing to open-source projects, and sharing my knowledge through blogs and tutorials.",
+    "bio.description": "I'm a mobile developer. I also develop websites and automation using n8n to simplify processes and increase productivity.",
+    "bio.description2": "I love exploring new things and creating content on YouTube and Medium. Follow my social media to see the content I create.",
     
     // Projects section
     "projects.title": "Projects",
@@ -47,15 +47,13 @@ const translations = {
     
     // Social media
     "social.github": "GitHub",
-    "social.github.description": "Check out my code repositories and open source contributions",
+    "social.github.description": "See other code repositories and project portfolios",
     "social.linkedin": "LinkedIn",
     "social.linkedin.description": "Professional network and career updates",
     "social.youtube": "YouTube",
-    "social.youtube.description": "Tutorials, tech reviews, and project showcases",
+    "social.youtube.description": "TTutorials on app development and other explorations",
     "social.medium": "Medium",
-    "social.medium.description": "In-depth articles on web development and technology",
-    "social.twitter": "Twitter",
-    "social.email": "Email",
+    "social.medium.description": "Read my articles",
     
     // Confirmation dialog
     "confirm.redirect.title": "Confirm Redirect",
@@ -80,8 +78,8 @@ const translations = {
     
     // Bio section
     "bio.title": "Halo, Saya Bagus!",
-    "bio.description": "Saya seorang Mobile Developer dengan keahlian dalam menciptakan aplikasi mobile yang mulus. Saya juga memiliki kemampuan untuk mengembangkan website dan bekerja dengan alat otomatisasi seperti n8n untuk menyederhanakan proses dan meningkatkan produktivitas.",
-    "bio.description2": "Di luar coding, saya menikmati mengeksplorasi tren pengembangan mobile terbaru, berkontribusi pada proyek open-source, dan membagikan pengetahuan saya melalui blog dan tutorial.",
+    "bio.description": "Saya seorang Mobile Developer. Saya juga mengembangkan website dan automation menggunakan n8n untuk menyederhanakan proses dan meningkatkan produktivitas.",
+    "bio.description2": "Saya suka mengeksplorasi hal baru, dan membuat konten di youtube dan medium. Follow social media saya untuk melihat konten yang saya buat.",
     
     // Projects section
     "projects.title": "Projects",
@@ -97,15 +95,13 @@ const translations = {
     
     // Social media
     "social.github": "GitHub",
-    "social.github.description": "Lihat repositori kode saya dan kontribusi open source",
+    "social.github.description": "Lihat repositori kode dan portofolio project yang lainnya",
     "social.linkedin": "LinkedIn",
-    "social.linkedin.description": "Jaringan profesional dan pembaruan karier",
+    "social.linkedin.description": "Lets Connect",
     "social.youtube": "YouTube",
-    "social.youtube.description": "Tutorial, ulasan teknologi, dan showcase proyek",
+    "social.youtube.description": "Tutorial seputar developmen aplikasi dan eksplorasi lainnya.",
     "social.medium": "Medium",
-    "social.medium.description": "Artikel mendalam tentang pengembangan web dan teknologi",
-    "social.twitter": "Twitter",
-    "social.email": "Email",
+    "social.medium.description": "Baca artikel yang saya buat",
     
     // Confirmation dialog
     "confirm.redirect.title": "Konfirmasi",
