@@ -8,52 +8,56 @@ import {
   Youtube,
   BookText,
 } from "lucide-react"
+import { useTranslation } from "@/components/translation-context"
 
 interface SocialLink {
   id: number
-  name: string
+  nameKey: string
   url: string
   icon: React.ReactNode
   username: string
-  description: string
+  descriptionKey: string
 }
 
-const socialLinks: SocialLink[] = [
+const getSocialLinks = (t: (key: string) => string): SocialLink[] => [
   {
     id: 1,
-    name: "GitHub",
+    nameKey: "social.github",
     url: "https://github.com/bagusrizky15",
     icon: <Github className="h-5 w-5 sm:h-6 sm:w-6" />,
     username: "@bagusrizky15",
-    description: "Check out my code repositories and open source contributions"
+    descriptionKey: "social.github.description"
   },
   {
     id: 2,
-    name: "LinkedIn",
+    nameKey: "social.linkedin",
     url: "https://www.linkedin.com/in/mohamadbagusrizky/",
     icon: <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />,
     username: "Mohamad Bagus Rizky",
-    description: "Professional network and career updates"
+    descriptionKey: "social.linkedin.description"
   },
   {
     id: 3,
-    name: "YouTube",
+    nameKey: "social.youtube",
     url: "https://www.youtube.com/@codewithbagus",
     icon: <Youtube className="h-5 w-5 sm:h-6 sm:w-6" />,
     username: "Code With Bagus",
-    description: "Tutorials, tech reviews, and project showcases"
+    descriptionKey: "social.youtube.description"
   },
   {
     id: 4,
-    name: "Medium",
+    nameKey: "social.medium",
     url: "https://medium.com/@mohamad.15",
     icon: <BookText className="h-5 w-5 sm:h-6 sm:w-6" />,
     username: "@mohamad.15",
-    description: "In-depth articles on web development and technology"
+    descriptionKey: "social.medium.description"
   }
 ]
 
 export function SocialMedia() {
+  const { t } = useTranslation()
+  const socialLinks = getSocialLinks(t)
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -61,7 +65,7 @@ export function SocialMedia() {
       transition={{ duration: 0.5 }}
       className="mt-4 sm:mt-6 w-full"
     >
-      <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Connect with Me</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">{t("social.title")}</h2>
       <div className="flex flex-col gap-3 sm:gap-4">
         {socialLinks.map((link) => (
           <motion.a
@@ -79,9 +83,9 @@ export function SocialMedia() {
               {link.icon}
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-base sm:text-lg">{link.name}</h3>
+              <h3 className="font-semibold text-base sm:text-lg">{t(link.nameKey)}</h3>
               <p className="text-muted-foreground text-xs sm:text-sm">{link.username}</p>
-              <p className="text-muted-foreground mt-1 text-xs sm:text-sm">{link.description}</p>
+              <p className="text-muted-foreground mt-1 text-xs sm:text-sm">{t(link.descriptionKey)}</p>
             </div>
             <Globe className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" />
           </motion.a>

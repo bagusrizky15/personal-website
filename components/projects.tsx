@@ -2,50 +2,54 @@
 
 import { motion } from "framer-motion"
 import { ExternalLink, Github, Globe } from "lucide-react"
+import { useTranslation } from "@/components/translation-context"
 
 interface Project {
   id: number
-  title: string
-  description: string
+  titleKey: string
+  descriptionKey: string
   technologies: string[]
   githubUrl?: string
   liveUrl?: string
 }
 
-const projects: Project[] = [
+const getProjects = (t: (key: string) => string): Project[] => [
   {
     id: 1,
-    title: "Halo BCA",
-    description: "Halo BCA is an assistance and product services for BCA customers and non-customers that can be accessed at any time.",
+    titleKey: "project.halo_bca.title",
+    descriptionKey: "project.halo_bca.description",
     technologies: ["Swift", "UIKit", "SwiftUI", "Firebase"],
     // githubUrl: "https://github.com/example/ecommerce",
     liveUrl: "https://apps.apple.com/id/app/halo-bca/id1527740494"
   }
   // {
   //   id: 2,
-  //   title: "Task Management App",
-  //   description: "A productivity application for managing tasks and projects with real-time collaboration features.",
+  //   titleKey: "project.task_management.title",
+  //   descriptionKey: "project.task_management.description",
   //   technologies: ["Next.js", "Firebase", "Tailwind CSS"],
   //   githubUrl: "https://github.com/example/task-manager",
   //   liveUrl: "https://tasks.example.com"
   // },
   // {
   //   id: 3,
-  //   title: "Weather Dashboard",
-  //   description: "A responsive weather dashboard that displays current conditions and forecasts for multiple locations.",
+  //   titleKey: "project.weather_dashboard.title",
+  //   descriptionKey: "project.weather_dashboard.description",
   //   technologies: ["React", "OpenWeather API", "Chart.js"],
   //   githubUrl: "https://github.com/example/weather-dashboard"
   // },
   // {
   //   id: 4,
-  //   title: "Portfolio Website",
-  //   description: "A modern portfolio website showcasing design and development projects with smooth animations.",
+  //   titleKey: "project.portfolio.title",
+  //   descriptionKey: "project.portfolio.description",
   //   technologies: ["TypeScript", "Next.js", "Framer Motion"],
   //   liveUrl: "https://portfolio.example.com"
   // }
 ]
 
 export function Projects() {
+  const { t } = useTranslation()
+  const projects = getProjects(t)
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -53,7 +57,7 @@ export function Projects() {
       transition={{ duration: 0.5 }}
       className="mt-4 sm:mt-6 w-full"
     >
-      <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">My Projects</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">{t("projects.title")}</h2>
       <div className="flex flex-col gap-4 sm:gap-6">
         {projects.map((project) => (
           <motion.div
@@ -63,8 +67,8 @@ export function Projects() {
             transition={{ duration: 0.5 }}
             className="border border-border rounded-xl p-4 sm:p-6 bg-card hover:shadow-lg transition-shadow duration-300"
           >
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">{project.description}</p>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">{t(project.titleKey)}</h3>
+            <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">{t(project.descriptionKey)}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.technologies.map((tech, index) => (
                 <span 

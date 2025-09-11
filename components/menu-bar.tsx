@@ -12,42 +12,43 @@ import {
   Zap
 } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useTranslation } from "@/components/translation-context"
 
 interface MenuItem {
   icon: React.ReactNode
-  label: string
+  labelKey: string
   gradient: string
   iconColor: string
 }
 
-const menuItems: MenuItem[] = [
+const getMenuItems = (t: (key: string) => string): MenuItem[] => [
   {
     icon: <User className="h-4 w-4" />,
-    label: "Hi",
+    labelKey: "menu.hi",
     gradient: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
     iconColor: "text-blue-500",
   },
   {
     icon: <Briefcase className="h-4 w-4" />,
-    label: "Projects",
+    labelKey: "menu.projects",
     gradient: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
     iconColor: "text-orange-500",
   },
   {
     icon: <Share2 className="h-4 w-4" />,
-    label: "Social Media",
+    labelKey: "menu.social_media",
     gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
     iconColor: "text-green-500",
   },
   {
     icon: <Zap className="h-4 w-4" />,
-    label: "N8N",
+    labelKey: "menu.n8n",
     gradient: "radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(147, 51, 234, 0.06) 50%, rgba(126, 34, 206, 0) 100%)",
     iconColor: "text-purple-500",
   },
   {
     icon: <FileText className="h-4 w-4" />,
-    label: "CV",
+    labelKey: "menu.cv",
     gradient: "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "text-red-500",
   },
@@ -83,9 +84,11 @@ interface MenuBarProps {
 
 export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
   const { theme } = useTheme()
+  const { t: translate } = useTranslation()
   const [showConfirm, setShowConfirm] = useState(false)
 
   const isDarkTheme = theme === "dark"
+  const menuItems = getMenuItems(translate)
 
   const handleCVClick = () => {
     setShowConfirm(true)
@@ -117,17 +120,17 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
         />
         <ul className="grid grid-cols-5 gap-1 sm:gap-2 relative z-10">
           {menuItems.map((item, index) => (
-            <motion.li key={item.label} className="relative">
+            <motion.li key={item.labelKey} className="relative">
               <motion.div
                 className="block rounded-xl overflow-visible group relative"
                 whileHover="hover"
                 initial="initial"
-                animate={activeItem === item.label ? "hover" : "initial"}
+                animate={activeItem === translate(item.labelKey) ? "hover" : "initial"}
                 onClick={() => {
-                  if (item.label === "CV") {
+                  if (item.labelKey === "menu.cv") {
                     handleCVClick()
                   } else {
-                    setActiveItem(item.label)
+                    setActiveItem(translate(item.labelKey))
                   }
                 }}
               >
@@ -143,12 +146,12 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
                   className="flex items-center justify-center gap-2 px-2 py-1.5 sm:px-3 sm:py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl w-full cursor-pointer"
                 >
                   <span
-                    className={`transition-colors duration-300 ${activeItem === item.label ? "text-foreground" : `group-hover:${item.iconColor} text-foreground`}`}
+                    className={`transition-colors duration-300 ${activeItem === translate(item.labelKey) ? "text-foreground" : `group-hover:${item.iconColor} text-foreground`}`}
                   >
                     {item.icon}
                   </span>
-                  <span className={`text-xs sm:text-sm ${activeItem === item.label ? "text-foreground" : ""}`}>
-                    {item.label}
+                  <span className={`text-xs sm:text-sm ${activeItem === translate(item.labelKey) ? "text-foreground" : ""}`}>
+                    {translate(item.labelKey)}
                   </span>
                 </div>
               </motion.div>
@@ -169,7 +172,7 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
           >
             <div className="p-6">
               <div className="flex justify-between items-start">
-                <h3 className="text-lg font-semibold">Confirm Redirect</h3>
+                <h3 className="text-lg font-semibold">{translate("confirm.redirect.title")}</h3>
                 <button 
                   onClick={cancelRedirect}
                   className="p-1 rounded-lg hover:bg-muted transition-colors"
@@ -178,20 +181,20 @@ export function MenuBar({ activeItem, setActiveItem }: MenuBarProps) {
                 </button>
               </div>
               <p className="mt-4 text-muted-foreground">
-                You will be redirected to another page. Do you want to continue?
+                {translate("confirm.redirect.message")}
               </p>
               <div className="mt-6 flex justify-end gap-3">
                 <button
                   onClick={cancelRedirect}
                   className="px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors"
                 >
-                  Cancel
+                  {translate("confirm.redirect.cancel")}
                 </button>
                 <button
                   onClick={confirmRedirect}
                   className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
-                  OK
+                  {translate("confirm.redirect.ok")}
                 </button>
               </div>
             </div>
