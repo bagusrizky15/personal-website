@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Bagus Rizky M",
   description: "Fullstack Developer | N8N Automation | Vibe Coding",
-  icons: [{ rel: "icon", url: "/fav.svg" }],
+  icons: { icon: "/favicon.svg" },
 }
 
 export default function RootLayout({
@@ -19,7 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
           {children}
         </ThemeProvider>
       </body>
