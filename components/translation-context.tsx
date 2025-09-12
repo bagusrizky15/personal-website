@@ -1,8 +1,8 @@
 "use client"
 
-import { createContext, useContext, ReactNode } from "react"
+import { createContext, ReactNode, useContext } from "react"
 
-type Language = "en" | "id"
+export type Language = "en" | "id" | "ja"
 
 interface TranslationContextType {
   language: Language
@@ -107,6 +107,54 @@ const translations = {
     "confirm.redirect.title": "Konfirmasi",
     "confirm.redirect.message": "Anda akan dialihkan ke halaman lain. Apakah Anda ingin melanjutkan?",
     "confirm.redirect.cancel": "Batal",
+    "confirm.redirect.ok": "OK",
+  },
+  ja: {
+    // Header
+    "header.title": "M Bagus Rizky",
+    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
+
+    // Menu items
+    "menu.hi": "Hi",
+    "menu.projects": "Projects",
+    "menu.social_media": "Social Media",
+    "menu.cv": "CV",
+    "menu.n8n": "N8N",
+
+    // General
+    "coming_soon": "近日公開",
+
+    // Bio section
+    "bio.title": "Hi, I'm Bagus!",
+    "bio.description": "私はモバイル開発者です。また、プロセスを簡素化し生産性を向上させるために、n8nを使用してウェブサイトや自動化も開発しています。",
+    "bio.description2": "新しいことを探求し、YouTubeやMediumでコンテンツを作成するのが好きです。私が作成するコンテンツを見るために、私のソーシャルメディアをフォローしてください。",
+
+    // Projects section
+    "projects.title": "プロジェクト",
+    "projects.description": "最近取り組んだプロジェクトの一部です。",
+
+    // Social Media section
+    "social.title": "私とつながる",
+    "social.description": "これらのプラットフォームのいずれかで、お気軽にご連絡ください。",
+
+    // Project cards
+    "project.halo_bca.title": "Halo BCA",
+    "project.halo_bca.description": "Halo BCAは、BCAの顧客および非顧客向けの支援および製品サービスで、いつでもアクセスできます。",
+
+    // Social media
+    "social.github": "GitHub",
+    "social.github.description": "他のコードリポジトリやプロジェクトポートフォリオを見る",
+    "social.linkedin": "LinkedIn",
+    "social.linkedin.description": "プロフェッショナルネットワークとキャリアの最新情報",
+    "social.youtube": "YouTube",
+    "social.youtube.description": "アプリ開発やその他の探求に関するチュートリアル",
+    "social.medium": "Medium",
+    "social.medium.description": "Mediumで私の記事を読む",
+
+    // Confirmation dialog
+    "confirm.redirect.title": "リダイレクトの確認",
+    "confirm.redirect.message": "別のページにリダイレクトされます。続行しますか？",
+    "confirm.redirect.cancel": "キャンセル",
     "confirm.redirect.ok": "OK",
   },
 }

@@ -1,23 +1,19 @@
 "use client"
 
-import { Languages } from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { useTranslation } from "@/components/translation-context"
+import { Language } from "@/components/translation-context"
 
 interface LanguageToggleProps {
-  language: "en" | "id"
-  onLanguageChange: (language: "en" | "id") => void
+  language: Language
+  onLanguageChange: (language: Language) => void
 }
 
 export function LanguageToggle({ language, onLanguageChange }: LanguageToggleProps) {
-  // We don't use the translation hook here because we want to show the language names in their native forms
-  // English and Indonesian (not translated versions)
-  
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -25,7 +21,7 @@ export function LanguageToggle({ language, onLanguageChange }: LanguageTogglePro
           className="flex items-center justify-center rounded-md p-2 transition-colors hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
           aria-label="Select language"
         >
-          <span className="text-sm font-medium">{language === "en" ? "EN" : "ID"}</span>
+          <span className="text-sm font-medium">{language.toUpperCase()}</span>
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -40,6 +36,12 @@ export function LanguageToggle({ language, onLanguageChange }: LanguageTogglePro
           className={language === "id" ? "bg-accent" : ""}
         >
           Indonesian
+        </DropdownMenuItem>
+        <DropdownMenuItem 
+          onClick={() => onLanguageChange("ja")}
+          className={language === "ja" ? "bg-accent" : ""}
+        >
+          Japan
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

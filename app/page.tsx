@@ -3,7 +3,7 @@
 import { MenuBar } from "@/components/menu-bar"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { LanguageToggle } from "@/components/language-toggle"
-import { TranslationProvider, useTranslation } from "@/components/translation-context"
+import { useTranslation } from "@/components/translation-context"
 import { BadgeCheck } from "lucide-react"
 import {
   Avatar,
@@ -45,34 +45,31 @@ function LanguageToggleWrapper() {
 
 export default function Page() {
   const [activeMenu, setActiveMenu] = useState("Hi")
-  const [language, setLanguage] = useState<"en" | "id">("en")
 
   return (
-    <TranslationProvider language={language} setLanguage={setLanguage}>
-      <div className="relative min-h-screen bg-background p-4 sm:p-6 md:p-8">
-        <div className="flex flex-col pt-8 max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
-            <div className="flex-shrink-0 mx-auto md:mx-0">
-              <Avatar className="h-24 w-24 sm:h-32 sm:w-32">
-                <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
+    <div className="relative min-h-screen bg-background p-4 sm:p-6 md:p-8">
+      <div className="flex flex-col pt-8 max-w-4xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+          <div className="flex-shrink-0 mx-auto md:mx-0">
+            <Avatar className="h-24 w-24 sm:h-32 sm:w-32">
+              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </div>
+          <div className="flex-1 w-full">
+            <HeaderSection />
+            <div className="mb-6">
+              <MenuBar activeItem={activeMenu} setActiveItem={setActiveMenu} />
             </div>
-            <div className="flex-1 w-full">
-              <HeaderSection />
-              <div className="mb-6">
-                <MenuBar activeItem={activeMenu} setActiveItem={setActiveMenu} />
-              </div>
-              <div className="w-full">
-                {activeMenu === "Hi" && <Bio />}
-                {activeMenu === "Projects" && <Projects />}
-                {activeMenu === "Social Media" && <SocialMedia />}
-                {activeMenu === "N8N" && <N8NContent />}
-              </div>
+            <div className="w-full">
+              {activeMenu === "Hi" && <Bio />}
+              {activeMenu === "Projects" && <Projects />}
+              {activeMenu === "Social Media" && <SocialMedia />}
+              {activeMenu === "N8N" && <N8NContent />}
             </div>
           </div>
         </div>
       </div>
-    </TranslationProvider>
+    </div>
   )
 }
