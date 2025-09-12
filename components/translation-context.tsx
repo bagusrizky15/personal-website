@@ -51,9 +51,9 @@ const translations = {
     "social.linkedin": "LinkedIn",
     "social.linkedin.description": "Professional network and career updates",
     "social.youtube": "YouTube",
-    "social.youtube.description": "TTutorials on app development and other explorations",
+    "social.youtube.description": "Tutorials on app development and other explorations",
     "social.medium": "Medium",
-    "social.medium.description": "Read my articles",
+    "social.medium.description": "Read my articles on medium",
     
     // Confirmation dialog
     "confirm.redirect.title": "Confirm Redirect",
@@ -97,11 +97,11 @@ const translations = {
     "social.github": "GitHub",
     "social.github.description": "Lihat repositori kode dan portofolio project yang lainnya",
     "social.linkedin": "LinkedIn",
-    "social.linkedin.description": "Lets Connect",
+    "social.linkedin.description": "Lets Connect Linkedin",
     "social.youtube": "YouTube",
-    "social.youtube.description": "Tutorial seputar developmen aplikasi dan eksplorasi lainnya.",
+    "social.youtube.description": "Tutorial seputar development aplikasi dan eksplorasi lainnya.",
     "social.medium": "Medium",
-    "social.medium.description": "Baca artikel yang saya buat",
+    "social.medium.description": "Baca artikel yang saya buat di medium",
     
     // Confirmation dialog
     "confirm.redirect.title": "Konfirmasi",
