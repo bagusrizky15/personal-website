@@ -54,6 +54,8 @@ const translations = {
     "social.youtube.description": "Tutorials on app development and other explorations",
     "social.medium": "Medium",
     "social.medium.description": "Read my articles on medium",
+    "social.gmail": "Gmail",
+    "social.gmail.description": "Send me an email",
     
     // Confirmation dialog
     "confirm.redirect.title": "Confirm Redirect",
@@ -102,6 +104,8 @@ const translations = {
     "social.youtube.description": "Tutorial seputar development aplikasi dan eksplorasi lainnya.",
     "social.medium": "Medium",
     "social.medium.description": "Baca artikel yang saya buat di medium",
+    "social.gmail": "Gmail",
+    "social.gmail.description": "Kirim saya email",
     
     // Confirmation dialog
     "confirm.redirect.title": "Konfirmasi",
@@ -150,6 +154,8 @@ const translations = {
     "social.youtube.description": "アプリ開発やその他の探求に関するチュートリアル",
     "social.medium": "Medium",
     "social.medium.description": "Mediumで私の記事を読む",
+    "social.gmail": "Gmail",
+    "social.gmail.description": "私にメールを送る",
 
     // Confirmation dialog
     "confirm.redirect.title": "リダイレクトの確認",

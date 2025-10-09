@@ -7,6 +7,7 @@ import {
   Globe,
   Youtube,
   BookText,
+  Mail,
 } from "lucide-react"
 import { useTranslation } from "@/components/translation-context"
 
@@ -51,6 +52,14 @@ const getSocialLinks = (t: (key: string) => string): SocialLink[] => [
     icon: <BookText className="h-5 w-5 sm:h-6 sm:w-6" />,
     username: "@mohamad.15",
     descriptionKey: "social.medium.description"
+  },
+  {
+    id: 5,
+    nameKey: "social.gmail",
+    url: "mailto:mbagusrizky15@gmail.com",
+    icon: <Mail className="h-5 w-5 sm:h-6 smw-6" />,
+    username: "mbagusrizky15@gmail.com",
+    descriptionKey: "social.gmail.description"
   }
 ]
 
