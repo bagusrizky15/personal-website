@@ -51,9 +51,9 @@ export default function Page() {
       <div className="flex flex-col pt-8 max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
           <div className="flex-shrink-0 mx-auto md:mx-0">
-            <Avatar className="h-24 w-24 sm:h-32 sm:w-32">
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+            <Avatar className="h-24 w-24 sm:h-32 sm:w-32 transition-transform duration-300 hover:scale-105">
+              <AvatarImage src="/photo_profile.jpeg" alt="@photo" className="object-cover" />
+              <AvatarFallback>M</AvatarFallback>
             </Avatar>
           </div>
           <div className="flex-1 w-full">
