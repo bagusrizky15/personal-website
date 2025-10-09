@@ -43,6 +43,12 @@ export function LanguageToggle({ language, onLanguageChange }: LanguageTogglePro
         >
           Japan
         </DropdownMenuItem>
+        <DropdownMenuItem 
+          onClick={() => onLanguageChange("zh")}
+          className={language === "zh" ? "bg-accent" : ""}
+        >
+          中文
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )

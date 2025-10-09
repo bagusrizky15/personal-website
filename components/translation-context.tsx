@@ -2,7 +2,7 @@
 
 import { createContext, ReactNode, useContext } from "react"
 
-export type Language = "en" | "id" | "ja"
+export type Language = "en" | "id" | "ja" | "zh"
 
 interface TranslationContextType {
   language: Language
@@ -162,6 +162,56 @@ const translations = {
     "confirm.redirect.message": "別のページにリダイレクトされます。続行しますか？",
     "confirm.redirect.cancel": "キャンセル",
     "confirm.redirect.ok": "OK",
+  },
+  zh: {
+    // Header
+    "header.title": "M Bagus Rizky",
+    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
+
+    // Menu items
+    "menu.hi": "Hi",
+    "menu.projects": "Projects",
+    "menu.social_media": "Social Media",
+    "menu.cv": "CV",
+    "menu.n8n": "N8N",
+
+    // General
+    "coming_soon": "即将推出",
+
+    // Bio section
+    "bio.title": "Hi, I'm Bagus!",
+    "bio.description": "我是一名移动端开发者。我也使用n8n开发网站和自动化流程，以简化流程并提高生产力。",
+    "bio.description2": "我喜欢探索新事物，并在YouTube和Medium上创建内容。关注我的社交媒体，查看我创建的内容。",
+
+    // Projects section
+    "projects.title": "项目",
+    "projects.description": "以下是我最近完成的一些项目。",
+
+    // Social Media section
+    "social.title": "与我联系",
+    "social.description": "欢迎在任何平台上与我联系。",
+
+    // Project cards
+    "project.halo_bca.title": "Halo BCA",
+    "project.halo_bca.description": "Halo BCA是为BCA客户和非客户提供的随时可访问的辅助及产品服务。",
+
+    // Social media
+    "social.github": "GitHub",
+    "social.github.description": "查看其他代码仓库和项目作品集",
+    "social.linkedin": "领英",
+    "social.linkedin.description": "职业网络和职业动态",
+    "social.youtube": "YouTube",
+    "social.youtube.description": "应用开发及相关探索教程",
+    "social.medium": "Medium",
+    "social.medium.description": "阅读我在Medium上的文章",
+    "social.gmail": "Gmail",
+    "social.gmail.description": "给我发送邮件",
+
+    // Confirmation dialog
+    "confirm.redirect.title": "确认重定向",
+    "confirm.redirect.message": "您将被重定向到另一个页面。是否继续？",
+    "confirm.redirect.cancel": "取消",
+    "confirm.redirect.ok": "确定",
   },
 }
 
