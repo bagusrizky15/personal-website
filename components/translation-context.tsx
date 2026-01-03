@@ -16,21 +16,21 @@ const translations = {
   en: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
     
     // Menu items
     "menu.hi": "Hi",
     "menu.projects": "Projects",
     "menu.social_media": "Social Media",
     "menu.cv": "CV",
-    "menu.n8n": "N8N",
+    "menu.apps": "Apps",
     
     // General
     "coming_soon": "Coming Soon",
     
     // Bio section
     "bio.title": "Hi, I'm Bagus!",
-    "bio.description": "I'm a mobile developer. I also develop websites and automation using n8n to simplify processes and increase productivity.",
+    "bio.description": "I'm a mobile developer. I also develop websites and automation using apps to simplify processes and increase productivity.",
     "bio.description2": "I love exploring new things and creating content on YouTube and Medium. Follow my social media to see the content I create.",
     
     // Projects section
@@ -66,21 +66,21 @@ const translations = {
   id: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
     
     // Menu items
     "menu.hi": "Hi",
     "menu.projects": "Projects",
     "menu.social_media": "Social Media",
     "menu.cv": "CV",
-    "menu.n8n": "N8N",
+    "menu.apps": "Apps",
     
     // General
     "coming_soon": "Coming Soon",
     
     // Bio section
     "bio.title": "Halo, Saya Bagus!",
-    "bio.description": "Saya seorang Mobile Developer. Saya juga mengembangkan website dan automation menggunakan n8n untuk menyederhanakan proses dan meningkatkan produktivitas.",
+    "bio.description": "Saya seorang Mobile Developer. Saya juga mengembangkan website dan automation menggunakan apps untuk menyederhanakan proses dan meningkatkan produktivitas.",
     "bio.description2": "Saya suka mengeksplorasi hal baru, dan membuat konten di youtube dan medium. Follow social media saya untuk melihat konten yang saya buat.",
     
     // Projects section
@@ -116,21 +116,21 @@ const translations = {
   ja: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
 
     // Menu items
     "menu.hi": "Hi",
     "menu.projects": "Projects",
     "menu.social_media": "Social Media",
     "menu.cv": "CV",
-    "menu.n8n": "N8N",
+    "menu.apps": "Apps",
 
     // General
     "coming_soon": "近日公開",
 
     // Bio section
     "bio.title": "Hi, I'm Bagus!",
-    "bio.description": "私はモバイル開発者です。また、プロセスを簡素化し生産性を向上させるために、n8nを使用してウェブサイトや自動化も開発しています。",
+    "bio.description": "私はモバイル開発者です。また、プロセスを簡素化し生産性を向上させるために、appsを使用してウェブサイトや自動化も開発しています。",
     "bio.description2": "新しいことを探求し、YouTubeやMediumでコンテンツを作成するのが好きです。私が作成するコンテンツを見るために、私のソーシャルメディアをフォローしてください。",
 
     // Projects section
@@ -166,21 +166,21 @@ const translations = {
   zh: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
 
     // Menu items
     "menu.hi": "Hi",
     "menu.projects": "Projects",
     "menu.social_media": "Social Media",
     "menu.cv": "CV",
-    "menu.n8n": "N8N",
+    "menu.apps": "Apps",
 
     // General
     "coming_soon": "即将推出",
 
     // Bio section
     "bio.title": "Hi, I'm Bagus!",
-    "bio.description": "我是一名移动端开发者。我也使用n8n开发网站和自动化流程，以简化流程并提高生产力。",
+    "bio.description": "我是一名移动端开发者。我也使用apps开发网站和自动化流程，以简化流程并提高生产力。",
     "bio.description2": "我喜欢探索新事物，并在YouTube和Medium上创建内容。关注我的社交媒体，查看我创建的内容。",
 
     // Projects section

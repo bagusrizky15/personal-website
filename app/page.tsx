@@ -11,10 +11,10 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar"
 import { useState } from "react"
-import { Bio } from "@/components/bio"
-import { Projects } from "@/components/projects"
-import { SocialMedia } from "@/components/social-media"
-import { N8NContent } from "@/components/n8n-content"
+import { Bio } from "@/app/pages/about/page"
+import { Projects } from "@/app/pages/projects/page"
+import { SocialMedia } from "@/app/pages/social-media/page"
+import { Apps } from "@/app/pages/apps/page"
 
 function HeaderSection() {
   const { t } = useTranslation()
@@ -65,7 +65,7 @@ export default function Page() {
               {activeMenu === "Hi" && <Bio />}
               {activeMenu === "Projects" && <Projects />}
               {activeMenu === "Social Media" && <SocialMedia />}
-              {activeMenu === "N8N" && <N8NContent />}
+              {activeMenu === "Apps" && <Apps />}
             </div>
           </div>
         </div>

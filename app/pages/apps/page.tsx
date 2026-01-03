@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useTranslation } from "@/components/translation-context"
 
-export function N8NContent() {
+export function Apps() {
   const { t } = useTranslation()
 
   return (
@@ -14,7 +14,7 @@ export function N8NContent() {
       className="mt-4 sm:mt-6 w-full text-left"
     >
       <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-        {t("menu.n8n")}
+        {t("menu.apps")}
       </h2>
       <p className="text-muted-foreground text-center text-md sm:text-md py-8">
         {t("coming_soon")}
