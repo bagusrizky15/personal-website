@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useTranslation } from "@/components/translation-context"
 import { useState, useRef } from "react"
 import { ChevronRight } from "lucide-react"
-import { ConvertWordToPdf } from "@/app/pages/apps/convert-word-to-pdf"
+import { ConvertWordToPdf } from "@/app/pages/apps/convert-word-to-pdf/convert-word-to-pdf"
 
 interface App {
   id: number

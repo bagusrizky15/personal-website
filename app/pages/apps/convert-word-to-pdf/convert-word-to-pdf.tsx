@@ -5,7 +5,7 @@ import { useTranslation } from "@/components/translation-context"
 import { useState, useRef } from "react"
 import { Upload, FileText, X, Loader2, Download, ArrowLeft, CheckCircle, AlertCircle } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
-import { convertWordToPdf } from "@/app/pages/apps/conversion-service"
+import { convertWordToPdf } from "@/app/pages/apps/convert-word-to-pdf/conversion-service"
 
 export function ConvertWordToPdf() {
   const { t } = useTranslation()

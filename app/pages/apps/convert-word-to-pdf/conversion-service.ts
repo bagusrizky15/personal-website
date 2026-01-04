@@ -1,4 +1,4 @@
-import { ConversionRequest } from "@/app/pages/apps/conversion-model";
+import { ConversionRequest } from "@/app/pages/apps/convert-word-to-pdf/conversion-model";
 
 export const convertWordToPdf = async ({ file }: ConversionRequest): Promise<Blob> => {
   const formData = new FormData();
