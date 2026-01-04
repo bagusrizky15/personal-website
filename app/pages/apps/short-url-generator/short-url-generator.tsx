@@ -26,7 +26,7 @@ export const ShortUrlGenerator: React.FC = () => {
 
     try {
       const result = await shortenUrl(inputUrl);
-      setShortenedUrl(result.url);
+      setShortenedUrl(result.shortUrl);
       setIsSuccess(true);
     } catch (error) {
       setError("Failed to shorten URL. Please try again.");
@@ -36,7 +36,7 @@ export const ShortUrlGenerator: React.FC = () => {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("https://bagusrizky.my.id/r/"+shortenedUrl);
+    navigator.clipboard.writeText(shortenedUrl);
     setIsCopied(true);
     toast({
       title: "Copied!",
@@ -104,6 +104,9 @@ export const ShortUrlGenerator: React.FC = () => {
               <CheckCircle className="h-8 w-8" />
             </div>
             <h3 className="text-xl font-bold mb-6">URL Shortened Successfully!</h3>
+            <p className="text-muted-foreground mb-8 text-sm sm:text-base max-w-md truncate">
+              Your URL will expired in 30 days.
+            </p>
             
             <div className="w-full bg-muted/50 p-4 rounded-lg mb-8 border">
               <p className="text-sm font-medium text-muted-foreground mb-2 text-left">
@@ -111,13 +114,13 @@ export const ShortUrlGenerator: React.FC = () => {
               </p>
               <div className="flex items-center gap-2 bg-background rounded-md border p-2">
                 <a
-                  href={"https://bagusrizky.my.id/r/"+shortenedUrl}
+                  href={shortenedUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-sm text-primary hover:underline truncate flex items-center gap-2"
                 >
                   <ExternalLink className="h-3 w-3" />
-                  {"https://bagusrizky.my.id/r/"+shortenedUrl}
+                  {shortenedUrl}
                 </a>
                 <button
                   onClick={handleCopy}
