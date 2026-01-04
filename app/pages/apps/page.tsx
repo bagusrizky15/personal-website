@@ -5,6 +5,7 @@ import { useTranslation } from "@/components/translation-context"
 import { useState, useRef } from "react"
 import { ChevronRight } from "lucide-react"
 import { ConvertWordToPdf } from "@/app/pages/apps/convert-word-to-pdf/convert-word-to-pdf"
+import { ShortUrlGenerator } from "@/app/pages/apps/short-url-generator/short-url-generator"
 
 interface App {
   id: number
@@ -17,6 +18,11 @@ const getApps = (t: (key: string) => string): App[] =>[
     id: 1,
     titleKey: "app.convertwordtopdf.title",
     descriptionKey: "app.convertwordtopdf.description"
+  },
+  {
+    id: 2,
+    titleKey: "app.shorturl.title",
+    descriptionKey: "app.shorturl.description"
   }
 ]
 
@@ -83,6 +89,7 @@ export function Apps() {
       ) : (
         <>
           {selectedApp.id === 1 && <ConvertWordToPdf />}
+          {selectedApp.id === 2 && <ShortUrlGenerator />}
         </>
       )}
     </motion.div>

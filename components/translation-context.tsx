@@ -67,6 +67,15 @@ const translations = {
     "app.convert.download": "Download PDF",
     "app.convert.back": "Back",
     "app.convert.success": "Conversion Successful!",
+
+    // Short URL
+    "app.shorturl.title": "Short URL Generator",
+    "app.shorturl.description": "Tool to shorten long URLs.",
+    "app.shorturl.placeholder": "Enter long URL here...",
+    "app.shorturl.button": "Shorten URL",
+    "app.shorturl.processing": "Processing...",
+    "app.shorturl.result": "Your Short URL:",
+    "app.shorturl.copy": "Copy",
     
     // Confirmation dialog
     "confirm.redirect.title": "Confirm Redirect",
@@ -129,6 +138,15 @@ const translations = {
     "app.convert.back": "Kembali",
     "app.convert.success": "Konversi Berhasil!",
 
+    // Short URL
+    "app.shorturl.title": "Short URL",
+    "app.shorturl.description": "Alat untuk Short URL panjang.",
+    "app.shorturl.placeholder": "Masukkan URL panjang di sini...",
+    "app.shorturl.button": "Short URL",
+    "app.shorturl.processing": "Memproses...",
+    "app.shorturl.result": "URL Anda:",
+    "app.shorturl.copy": "Salin",
+
     // Confirmation dialog
     "confirm.redirect.title": "Konfirmasi",
     "confirm.redirect.message": "Anda akan dialihkan ke halaman lain. Apakah Anda ingin melanjutkan?",
@@ -190,6 +208,15 @@ const translations = {
     "app.convert.back": "戻る",
     "app.convert.success": "変換成功！",
 
+    // Short URL
+    "app.shorturl.title": "短縮URL作成",
+    "app.shorturl.description": "長いURLを短縮するツール。",
+    "app.shorturl.placeholder": "ここに長いURLを入力...",
+    "app.shorturl.button": "URLを短縮",
+    "app.shorturl.processing": "処理中...",
+    "app.shorturl.result": "あなたの短縮URL:",
+    "app.shorturl.copy": "コピー",
+
     // Confirmation dialog
     "confirm.redirect.title": "リダイレクトの確認",
     "confirm.redirect.message": "別のページにリダイレクトされます。続行しますか？",
@@ -250,6 +277,15 @@ const translations = {
     "app.convert.download": "下载PDF",
     "app.convert.back": "返回",
     "app.convert.success": "转换成功！",
+
+    // Short URL
+    "app.shorturl.title": "短链接生成器",
+    "app.shorturl.description": "用于缩短长URL的工具。",
+    "app.shorturl.placeholder": "在此输入长URL...",
+    "app.shorturl.button": "缩短URL",
+    "app.shorturl.processing": "处理中...",
+    "app.shorturl.result": "您的短链接:",
+    "app.shorturl.copy": "复制",
 
     // Confirmation dialog
     "confirm.redirect.title": "确认重定向",
