@@ -26,7 +26,7 @@ export const ShortUrlGenerator: React.FC = () => {
 
     try {
       const result = await shortenUrl(inputUrl);
-      setShortenedUrl(result.shortUrl);
+      setShortenedUrl(result.url);
       setIsSuccess(true);
     } catch (error) {
       setError("Failed to shorten URL. Please try again.");
@@ -36,7 +36,7 @@ export const ShortUrlGenerator: React.FC = () => {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(shortenedUrl);
+    navigator.clipboard.writeText("https://bagusrizky.my.id/r/"+shortenedUrl);
     setIsCopied(true);
     toast({
       title: "Copied!",
@@ -59,54 +59,6 @@ export const ShortUrlGenerator: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="border border-border rounded-xl p-6 bg-card relative max-w-2xl mx-auto"
     >
-      {isSuccess ? (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="flex flex-col items-center justify-center py-8 text-center"
-        >
-          <div className="h-16 w-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6">
-            <CheckCircle className="h-8 w-8" />
-          </div>
-          <h3 className="text-xl font-bold mb-6">URL Shortened Successfully!</h3>
-          
-          <div className="w-full bg-muted/50 p-4 rounded-lg mb-8 border">
-            <p className="text-sm font-medium text-muted-foreground mb-2 text-left">
-              {t("app.shorturl.result")}
-            </p>
-            <div className="flex items-center gap-2 bg-background rounded-md border p-2">
-              <a
-                href={shortenedUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 text-sm text-primary hover:underline truncate flex items-center gap-2"
-              >
-                <ExternalLink className="h-3 w-3" />
-                {shortenedUrl}
-              </a>
-              <button
-                onClick={handleCopy}
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-muted h-8 w-8"
-                title={t("app.shorturl.copy")}
-              >
-                {isCopied ? (
-                  <Check className="h-4 w-4 text-green-500" />
-                ) : (
-                  <Copy className="h-4 w-4" />
-                )}
-              </button>
-            </div>
-          </div>
-
-          <button
-            onClick={handleReset}
-            className="px-6 py-2 border border-border rounded-md text-sm font-medium hover:bg-muted transition-colors flex items-center justify-center gap-2"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Shorten Another
-          </button>
-        </motion.div>
-      ) : (
       <div className="flex flex-col gap-6">
         <div className="space-y-2">
           <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
@@ -140,6 +92,56 @@ export const ShortUrlGenerator: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {isSuccess && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm rounded-xl">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-card border border-border p-6 rounded-lg shadow-lg max-w-md w-full mx-4 flex flex-col items-center text-center"
+          >
+            <div className="h-16 w-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6">
+              <CheckCircle className="h-8 w-8" />
+            </div>
+            <h3 className="text-xl font-bold mb-6">URL Shortened Successfully!</h3>
+            
+            <div className="w-full bg-muted/50 p-4 rounded-lg mb-8 border">
+              <p className="text-sm font-medium text-muted-foreground mb-2 text-left">
+                {t("app.shorturl.result")}
+              </p>
+              <div className="flex items-center gap-2 bg-background rounded-md border p-2">
+                <a
+                  href={"https://bagusrizky.my.id/r/"+shortenedUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-sm text-primary hover:underline truncate flex items-center gap-2"
+                >
+                  <ExternalLink className="h-3 w-3" />
+                  {"https://bagusrizky.my.id/r/"+shortenedUrl}
+                </a>
+                <button
+                  onClick={handleCopy}
+                  className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-muted h-8 w-8"
+                  title={t("app.shorturl.copy")}
+                >
+                  {isCopied ? (
+                    <Check className="h-4 w-4 text-green-500" />
+                  ) : (
+                    <Copy className="h-4 w-4" />
+                  )}
+                </button>
+              </div>
+            </div>
+
+            <button
+              onClick={handleReset}
+              className="w-full py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Shorten Another
+            </button>
+          </motion.div>
+        </div>
       )}
 
       {error && (
