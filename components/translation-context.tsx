@@ -16,7 +16,7 @@ const translations = {
   en: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
     
     // Menu items
     "menu.hi": "Hi",
@@ -56,6 +56,17 @@ const translations = {
     "social.medium.description": "Read my articles on medium",
     "social.gmail": "Gmail",
     "social.gmail.description": "Send me an email",
+
+    // Apps
+    "app.convertwordtopdf.title": "Convert Word to PDF",
+    "app.convertwordtopdf.description": "Tools for convert word to pdf.",
+    "app.convert.upload.title": "Click to upload or drag and drop",
+    "app.convert.upload.subtitle": "Word Documents (.doc, .docx)",
+    "app.convert.select_file": "Select File",
+    "app.convert.button": "Convert",
+    "app.convert.download": "Download PDF",
+    "app.convert.back": "Back",
+    "app.convert.success": "Conversion Successful!",
     
     // Confirmation dialog
     "confirm.redirect.title": "Confirm Redirect",
@@ -66,7 +77,7 @@ const translations = {
   id: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
     
     // Menu items
     "menu.hi": "Hi",
@@ -107,6 +118,17 @@ const translations = {
     "social.gmail": "Gmail",
     "social.gmail.description": "Kirim saya email",
     
+    // Apps
+    "app.convertwordtopdf.title": "Konversi Word ke PDF",
+    "app.convertwordtopdf.description": "Alat untuk mengonversi word ke pdf.",
+    "app.convert.upload.title": "Klik untuk mengunggah atau seret dan lepas",
+    "app.convert.upload.subtitle": "Dokumen Word (.doc, .docx)",
+    "app.convert.select_file": "Pilih File",
+    "app.convert.button": "Konversi",
+    "app.convert.download": "Unduh PDF",
+    "app.convert.back": "Kembali",
+    "app.convert.success": "Konversi Berhasil!",
+
     // Confirmation dialog
     "confirm.redirect.title": "Konfirmasi",
     "confirm.redirect.message": "Anda akan dialihkan ke halaman lain. Apakah Anda ingin melanjutkan?",
@@ -116,7 +138,7 @@ const translations = {
   ja: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
 
     // Menu items
     "menu.hi": "Hi",
@@ -157,6 +179,17 @@ const translations = {
     "social.gmail": "Gmail",
     "social.gmail.description": "私にメールを送る",
 
+    // Apps
+    "app.convertwordtopdf.title": "WordをPDFに変換",
+    "app.convertwordtopdf.description": "WordをPDFに変換するツール。",
+    "app.convert.upload.title": "クリックしてアップロードまたはドラッグ＆ドロップ",
+    "app.convert.upload.subtitle": "Wordドキュメント (.doc, .docx)",
+    "app.convert.select_file": "ファイルを選択",
+    "app.convert.button": "変換",
+    "app.convert.download": "PDFをダウンロード",
+    "app.convert.back": "戻る",
+    "app.convert.success": "変換成功！",
+
     // Confirmation dialog
     "confirm.redirect.title": "リダイレクトの確認",
     "confirm.redirect.message": "別のページにリダイレクトされます。続行しますか？",
@@ -166,7 +199,7 @@ const translations = {
   zh: {
     // Header
     "header.title": "M Bagus Rizky",
-    "header.description": "Fullstack Developer | apps Automation | Vibe Coding",
+    "header.description": "Fullstack Developer | N8N Automation | Vibe Coding",
 
     // Menu items
     "menu.hi": "Hi",
@@ -206,6 +239,17 @@ const translations = {
     "social.medium.description": "阅读我在Medium上的文章",
     "social.gmail": "Gmail",
     "social.gmail.description": "给我发送邮件",
+
+    // Apps
+    "app.convertwordtopdf.title": "Word转PDF",
+    "app.convertwordtopdf.description": "将Word转换为PDF的工具。",
+    "app.convert.upload.title": "点击上传或拖放",
+    "app.convert.upload.subtitle": "Word文档 (.doc, .docx)",
+    "app.convert.select_file": "选择文件",
+    "app.convert.button": "转换",
+    "app.convert.download": "下载PDF",
+    "app.convert.back": "返回",
+    "app.convert.success": "转换成功！",
 
     // Confirmation dialog
     "confirm.redirect.title": "确认重定向",

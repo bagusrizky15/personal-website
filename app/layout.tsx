@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Bagus Rizky M",
-  description: "iOS Developer | apps Automation | Vibe Coding",
+  description: "iOS Developer | N8N Automation | Vibe Coding",
   icons: { icon: "/favicon.svg" },
 }
 
