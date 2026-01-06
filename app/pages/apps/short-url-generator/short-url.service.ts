@@ -15,8 +15,6 @@ export const shortenUrl = async (url: string): Promise<ShortUrlResponse> => {
 
   // Ambil data dari response.data
   return {
-    originalUrl: resJson.data.url,
-    shortUrl: `${process.env.NEXT_PUBLIC_CONVERT_API}/r/${resJson.data.code}`,
-    code: resJson.data.code,
+    shortUrl: `${resJson.data.short_url}`,
   };
 };
