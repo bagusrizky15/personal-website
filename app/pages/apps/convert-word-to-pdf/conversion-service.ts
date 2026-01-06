@@ -5,7 +5,7 @@ export const convertWordToPdf = async ({ file }: ConversionRequest): Promise<Blo
   formData.append("file", file);
 
   const response = await fetch(
-    process.env.NEXT_PUBLIC_CONVERT_API + "/app/convert-word-to-pdf/convert",
+    process.env.NEXT_PUBLIC_CONVERT_API + "/api/convert-word-to-pdf/convert",
     {
       method: "POST",
       body: formData,
